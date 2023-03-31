@@ -155,7 +155,6 @@ body {
   font-size: 1.6rem;
   line-height: var(--lineHeight-4);
   overflow-y: overlay;
-  height: 300vh;
 }
 
 ::-webkit-scrollbar {
@@ -196,6 +195,68 @@ body {
 .profile-card .profile-banner {
   border-radius: var(--radius-circle);
 }
+.headline {
+  color: var(--text-columbia-blue);
+  line-height: var(--lineHeight-1);
+}
+.headline-1 {
+  font-size: var(--fontSize-1);
+  color: var(--text-alice-blue);
+  font-weight: var(--weight-extraBold);
+}
+
+.headline-2 {
+  font-size: var(--fontSize-2);
+}
+
+.headline-3 {
+  font-size: var(--fontSize-2);
+  line-height: var(--lineHeight-2);
+}
+
+.section-title {
+  margin-block-end: 10px;
+}
+
+.headline .span {
+  background-image: var(--gradient-1);
+  display: inline-block;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.btn {
+  background-image: var(--gradient-2);
+  background-size: 200%;
+  background-position: left;
+  color: var(--white);
+  font-size: var(--fontSize-6);
+  font-weight: var(--weight-bold);
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  transition: var(--transition-2);
+}
+
+.btn:is(:hover, :focus-within) {
+  background-position: right;
+}
+
+.btn-primary {
+  padding: 8px 16px;
+  border-radius: var(--radius-6);
+}
+
+.btn-secondary {
+  padding: 18px 30px;
+  border-radius: var(--radius-pill);
+}
+
+.w-100 {
+  width: 100%;
+}
+
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -233,6 +294,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
 }
 
 .nav-open-btn,
@@ -320,6 +382,82 @@ body {
   #HERO
 \*-----------------------------------*/
 
+.hero-bg {
+  display: none;
+}
+
+.hero {
+  padding-block-start: calc(var(--section-padding) + 160px);
+}
+
+.hero .container {
+  display: grid;
+  gap: 50px;
+}
+
+.hero-subtitle {
+  font-size: var(--fontSize-6);
+  font-weight: var(--weight-bold);
+}
+.hero .section-title {
+  margin-block: 20px;
+}
+.hero .hero-text {
+  margin-block-end: 40px;
+}
+
+.her .input-wrapper:hover {
+  box-shadow: var(--shadow-2);
+}
+
+.hero .input-wrapper {
+  position: relative;
+  transition: var(--transition-1);
+  padding-inline-start: 20px;
+  background-color: var(--bg-prussian-blue);
+  border-radius: var(--radius-6);
+  border: 1px solid var(--bg-carolina-blue);
+  display: flex;
+  justify-items: flex-end;
+  transition: var(--transition-1);
+}
+
+.hero .input-field {
+  padding-inline-end: 5px;
+}
+
+.hero-banner {
+  position: relative;
+}
+.hero-banner .w-100 {
+  max-width: max-content;
+  margin-inline: auto;
+}
+
+.hero .shape {
+  position: absolute;
+  z-index: -1;
+  animation: heroDecoAnim 3s linear infinite alternate;
+}
+
+@keyframes heroDecoAnim {
+  0% {
+    transform: translate(40px) rotate(0);
+  }
+  100% {
+    transform: translate(0) rotate(0.4turn);
+  }
+}
+
+.hero .shape-1 {
+  top: 50px;
+  right: 40px;
+}
+
+.hero .shape-2 {
+  bottom: 20px;
+  left: 24px;
+}
 /*-----------------------------------*\
   #TOPICS
 \*-----------------------------------*/
