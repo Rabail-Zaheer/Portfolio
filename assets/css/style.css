@@ -257,6 +257,23 @@ body {
   width: 100%;
 }
 
+.card {
+  background-color: var(--bg-oxford-blue);
+  border: 1px solid var(--border-prussian-blue);
+}
+
+.img-holder {
+  aspect-ratio: var(--width) / var(--height);
+  background-color: var(--bg-prussian-blue);
+  overflow: hidden;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -462,6 +479,95 @@ body {
   #TOPICS
 \*-----------------------------------*/
 
+.topic-card {
+  padding: 24px;
+  border-radius: var(--radius-8);
+}
+
+.topic-card .card-content {
+  margin-block-end: 15px;
+}
+
+.topic-card .card-text {
+  color: var(--text-wild-blue-yonder);
+  font-size: var(--fontSize-6);
+  margin-block: 15px 20px;
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn-icon {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  background: var(--bg-prussian-blue);
+  border-radius: var(--radius-circle);
+  color: var(--white);
+}
+
+.btn-icon:is(:hover, :focus-visible) {
+  background: var(--gradient-1);
+}
+
+.slider {
+  --slider-items: 1;
+  overflow: hidden;
+}
+
+.slider-list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform var(--transition-2);
+}
+
+.slider-item {
+  min-width: 100%;
+}
+
+.slider-card {
+  position: relative;
+}
+.slider-card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: var(--gradient-3);
+  border-radius: var(--radius-8);
+}
+
+.slider-list .slider-banner {
+  border-radius: var(--radius-8);
+}
+
+.slider-content {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+
+.slider-title {
+  color: var(--text-columbia-blue);
+  font-weight: var(--weight-bold);
+  margin-block-end: 5px;
+  transition: var(--transition-2);
+}
+
+.slider-car:is(:hover, :focus-visible) .slider-title {
+  color: var(--text-carolina-blue);
+}
+
+.slider-subtitle {
+  font-size: var(--fontSize-7);
+}
 /*-----------------------------------*\
   #FEATURED
 \*-----------------------------------*/
