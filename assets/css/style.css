@@ -662,9 +662,41 @@ body {
   margin-inline: auto;
   margin-block-start: 30px;
 }
+
 /*-----------------------------------*\
   #POPULAR TAGS
 \*-----------------------------------*/
+
+.tags .grid-list {
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+}
+
+.tag-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 18px;
+  border-radius: var(--radius-16);
+}
+
+.tag-btn:is(:hover, :focus-visible) {
+  box-shadow: var(--shadow-2);
+  background-image: linear-gradient(
+      var(--bg-oxford-blue),
+      var(--bg-oxford-blue)
+    ),
+    var(--gradient-1);
+  background-clip: padding-box, border-box;
+  border-color: transparent;
+  transform: translate(-2px);
+  transition: var(--transition-1);
+}
+
+.tag-btn img {
+  width: 100%;
+  max-width: 32px;
+}
 
 /*-----------------------------------*\
   #RECENT POST
