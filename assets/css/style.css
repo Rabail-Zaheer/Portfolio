@@ -1235,6 +1235,7 @@ body.nav-active {
   .navbar {
     all: unset;
     display: block;
+    width: 100%;
   }
 
   .navbar-list {
@@ -1272,8 +1273,8 @@ body.nav-active {
 
   /* FOOTER */
 
-  .footer-top{
+  .footer-top {
     gap: 48px;
-    paddin
+    padding-inline: 120px;
   }
 }
