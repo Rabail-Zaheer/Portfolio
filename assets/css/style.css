@@ -132,7 +132,7 @@ button {
 }
 
 input {
-  width: 100;
+  width: 100%;
   outline: none;
 }
 button {
@@ -318,7 +318,7 @@ body.nav-active {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100;
+  width: 100%;
   padding-block: 24px;
   background-color: var(--bg-oxford-blue-2);
   z-index: 4;
@@ -455,7 +455,7 @@ body.nav-active {
   margin-block-end: 40px;
 }
 
-.her .input-wrapper:hover {
+.hero .input-wrapper:hover {
   box-shadow: var(--shadow-2);
 }
 
@@ -656,7 +656,7 @@ body.nav-active {
   z-index: 1;
 }
 
-.feature .card-wrapper .card-btn::befor {
+.feature .card-wrapper .card-btn::before {
   content: "";
   position: absolute;
   top: -13px;
@@ -807,11 +807,12 @@ body.nav-active {
   content: "";
   display: block;
   width: 96px;
+  height: 3px;
   background-color: var(--bg-carolina-blue);
   margin-block-start: 10px;
 }
 
-.popular-car {
+.popular-card {
   display: flex;
   align-items: flex-start;
   gap: 10px;
@@ -860,7 +861,7 @@ body.nav-active {
   font-size: var(--fontSize-7);
 }
 
-.insta0card .card-text {
+.insta-card .card-text {
   color: var(--text-slate-gray);
   font-weight: var(--weight-bold);
   margin-block: 5px 30px;
@@ -936,7 +937,7 @@ body.nav-active {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY();
+  transform: translateY(-50%);
   --ionicon-stroke-width: 40px;
 }
 
@@ -988,6 +989,7 @@ body.nav-active {
   display: grid;
   place-items: center;
   border-radius: var(--radius-circle);
+  border: 3px solid var(--bg-carolina-blue);
   transition: var(--transition-1);
   visibility: hidden;
   opacity: 0;
@@ -1062,7 +1064,7 @@ body.nav-active {
     pointer-events: none;
   }
   .hero-bg-1 {
-    top: 88px;
+    top: 80px;
     left: 0;
   }
   .hero-bg-2 {
@@ -1179,7 +1181,7 @@ body.nav-active {
     width: calc(50% - 15px);
   }
 
-  .feature.list li:nth-child(n + 1) {
+  .feature.list li:nth-child(n + 3) {
     width: calc(33.33% - 20px);
   }
   .feature-list li:nth-child(n + 3) .headline-3 {
@@ -1195,7 +1197,7 @@ body.nav-active {
   /* RECENT POST  */
 
   .recent-post .container {
-    grid-template-columns: 1fr 0 6fr;
+    grid-template-columns: 1fr 0.6fr;
     align-items: flex-start;
   }
 
@@ -1220,7 +1222,9 @@ body.nav-active {
   /* REUSED STYLE  */
 
   .container {
-    max-width: 1148px;
+    max-width: 1140px;
+  }
+  body.nav-active {
   }
 
   /* HEADER */
@@ -1232,10 +1236,10 @@ body.nav-active {
     display: none;
   }
 
-  .navbar {
+  .navbar,
+  .navbar-active {
     all: unset;
     display: block;
-    width: 100%;
   }
 
   .navbar-list {
